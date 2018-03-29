@@ -1,28 +1,26 @@
-.App {
-  text-align: center;
-}
+// Bootstrap + Mixins
+@import './assets/styles/mixins/breakpoints.scss';
+@import './assets/styles/mixins/grid-framework.scss';
+@import './assets/styles/mixins/grid.scss';
+@import './assets/styles/mixins/font.scss';
+@import './assets/styles/mixins/transition.scss';
+@import './assets/styles/mixins/buttons.scss';
+@import './assets/styles/mixins/z-index.scss';
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+// Variables
+@import './assets/styles/variables.scss';
+@import './assets/styles/reboot.scss';
+@import './assets/styles/grid.scss';
+@import './assets/styles/typo.scss';
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+// Elements
+@import './assets/styles/elements/buttons.scss';
+@import './assets/styles/elements/card.scss';
+@import './assets/styles/elements/form.scss';
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+// Components
+@import './Header/Header.scss';
+@import './Nav/Nav.scss';
+@import './TopChampions/TopChampions.scss';
+@import './Champions/Champion.scss';
+@import './Filter/Filter.scss';

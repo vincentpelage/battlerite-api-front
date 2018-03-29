@@ -1,19 +1,50 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Fragment, Component } from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+// Components import
+import Header from './Header/Header';
+import Nav from './Nav/Nav';
+import TopChampions from './TopChampions/TopChampions';
+import ChampionsStats from './ChampionsStats/ChampionsStats';
+
+// Data import
+import { topSoloDatas, topDuoDatas, topTrioDatas } from '../datasBDD/topBDD'
+
+// CSS import
 import './App.css';
 
 class App extends Component {
+  state = {
+    topBDD: {
+      topSoloDatas: [],
+      topDuoDatas: [],
+      topTrioDatas: []
+    }
+  };
+
+  componentWillMount() {
+    this.setState({
+      topBDD: {
+        topSoloDatas,
+        topDuoDatas,
+        topTrioDatas
+      }
+    });
+  }
+
   render() {
+    const { topBDD } = this.state;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Router>
+        <Fragment>
+          <Header />
+          <Nav />
+          <Route exact path="/" render={() => <TopChampions topBDD={topBDD} />} />
+          <Route path="/champions-stats" component={ChampionsStats} />
+          <Route path="/best-synergies" component={ChampionsStats} />
+        </Fragment>
+      </Router>
     );
   }
 }

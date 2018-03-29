@@ -1,0 +1,45 @@
+@import '../../assets/styles/mixins/breakpoints.scss';
+
+$banner-height-mobile: 290px;
+$banner-height-desktop: 450px;
+
+.header {
+  min-height: $banner-height-mobile;
+  width: 100%;
+  background-image: url('../assets/images/battlerite.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: $banner-height-mobile;
+  }
+  .light {
+    vertical-align: top;
+    svg {
+      height: 40px;
+      vertical-align: top;
+      fill: $turquoise;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    min-height: $banner-height-desktop;
+    background-position: top;
+    .flex {
+      height: $banner-height-desktop;
+    }
+    .light {
+      svg {
+        height: 65px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    background-position: 0 -75px;
+  }
+}

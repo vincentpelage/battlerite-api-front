@@ -1,0 +1,14 @@
+@import "../variables.scss";
+@import "../mixins/breakpoints.scss";
+
+.card {
+  background-color: $light-purple;
+  padding: 1rem 10px;
+  margin-bottom: 1rem;
+  @include media-breakpoint-up(sm) {
+    padding: 1rem 5px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 1rem 1rem;
+  }
+}

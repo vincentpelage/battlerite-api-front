@@ -1,0 +1,118 @@
+@import "../../assets/styles/mixins/z-index.scss";
+@import "../../assets/styles/mixins/breakpoints.scss";
+@import "../../assets/styles/variables.scss";
+
+$img-size-mobile: 70px;
+$img-size-tablet: 85px;
+$img-size-desktop: 100px;
+$badge-height-mobile: 26px;
+$badge-height-desktop: 31px;
+
+.card-champion {
+  text-align: center;
+
+  // IMAGES
+  .card-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: $img-size-mobile;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: auto;
+    @include descending-z-index(3);
+    img {
+      width: $img-size-mobile;
+      height: $img-size-mobile;
+      border-radius: 50%;
+      &:not(:first-child) {
+        margin-left: -2rem;
+      }
+    }
+  }
+
+  // BANNER CONTENT
+  .content {
+    background-color: $purple;
+    height: $badge-height-mobile;
+    padding: 4px;
+    margin: -10px auto 0 auto;
+    position: relative;
+    z-index: 5;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-style: solid;
+      border-width: $badge-height-mobile/2 0 $badge-height-mobile/2 10px;
+      border-color: transparent transparent transparent $light-purple;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-style: solid;
+      border-width: $badge-height-mobile/2 10px $badge-height-mobile/2 0;
+      border-color: transparent $light-purple transparent transparent;
+    }
+    @include media-breakpoint-up(sm) {
+      height: $badge-height-desktop;
+      padding: 5px;
+      font-size: 14px;
+      max-width: 200px;
+
+      &::before {
+        border-width: $badge-height-desktop/2 0 $badge-height-desktop/2 10px;
+      }
+      &::after {
+        border-width: $badge-height-desktop/2 10px $badge-height-desktop/2 0;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 230px;
+    }
+  }
+
+  // CONTENT DATA
+  .data {
+    display: inline-block;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    padding: 0px 5px;
+    font-family: $font-family-header;
+    width: 50px;
+    margin-top: -5px;
+    position: relative;
+  }
+
+  // RESET MARGIN BOTTOM
+  p {margin-bottom: 0}
+
+  // TABLET
+  @include media-breakpoint-up(md) {
+    .card-image {
+      height: $img-size-tablet;
+      img {
+        width: $img-size-tablet;
+        height: $img-size-tablet;
+      }
+    }
+    .data {
+      width: 70px;
+    }
+  }
+
+  // DESKTOP
+  @include media-breakpoint-up(lg) {
+    .card-image {
+      height: $img-size-desktop;
+      img {
+        width: $img-size-desktop;
+        height: $img-size-desktop;
+      }
+    }
+  }
+}

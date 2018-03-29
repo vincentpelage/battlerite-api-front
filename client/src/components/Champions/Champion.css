@@ -1,0 +1,87 @@
+.card-champion {
+  text-align: center; }
+  .card-champion .card-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 70px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: auto;
+    position: relative; }
+    .card-champion .card-image img {
+      position: relative; }
+      .card-champion .card-image img:nth-child(0) {
+        z-index: 3; }
+      .card-champion .card-image img:nth-child(1) {
+        z-index: 2; }
+      .card-champion .card-image img:nth-child(2) {
+        z-index: 1; }
+    .card-champion .card-image img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%; }
+      .card-champion .card-image img:not(:first-child) {
+        margin-left: -2rem; }
+  .card-champion .content {
+    background-color: #3C3F5B;
+    height: 26px;
+    padding: 4px;
+    margin: -10px auto 0 auto;
+    position: relative;
+    z-index: 5; }
+    .card-champion .content::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-style: solid;
+      border-width: 13px 0 13px 10px;
+      border-color: transparent transparent transparent #282A3C; }
+    .card-champion .content::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-style: solid;
+      border-width: 13px 10px 13px 0;
+      border-color: transparent #282A3C transparent transparent; }
+    @media (min-width: 576px) {
+      .card-champion .content {
+        height: 31px;
+        padding: 5px;
+        font-size: 14px;
+        max-width: 200px; }
+        .card-champion .content::before {
+          border-width: 15.5px 0 15.5px 10px; }
+        .card-champion .content::after {
+          border-width: 15.5px 10px 15.5px 0; } }
+    @media (min-width: 992px) {
+      .card-champion .content {
+        max-width: 230px; } }
+  .card-champion .data {
+    display: inline-block;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    padding: 0px 5px;
+    font-family: "Exo";
+    width: 50px;
+    margin-top: -5px;
+    position: relative; }
+  .card-champion p {
+    margin-bottom: 0; }
+  @media (min-width: 768px) {
+    .card-champion .card-image {
+      height: 85px; }
+      .card-champion .card-image img {
+        width: 85px;
+        height: 85px; }
+    .card-champion .data {
+      width: 70px; } }
+  @media (min-width: 992px) {
+    .card-champion .card-image {
+      height: 100px; }
+      .card-champion .card-image img {
+        width: 100px;
+        height: 100px; } }

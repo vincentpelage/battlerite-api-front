@@ -1,0 +1,23 @@
+.solo, .duo, .trio {
+  margin-bottom: 2rem; }
+
+.solo .top-color {
+  color: #8083FF; }
+
+.solo .data {
+  color: #8083FF;
+  border-color: #8083FF; }
+
+.duo .top-color {
+  color: #61D1E5; }
+
+.duo .data {
+  color: #61D1E5;
+  border-color: #61D1E5; }
+
+.trio .top-color {
+  color: #A03865; }
+
+.trio .data {
+  color: #A03865;
+  border-color: #A03865; }

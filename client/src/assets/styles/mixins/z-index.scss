@@ -1,0 +1,13 @@
+@mixin descending-z-index($count) {
+  position: relative;
+  img {
+    position: relative;
+    $target: 0;
+    $index: $count;
+    @while $index > 0 {
+      &:nth-child(#{$target}){ z-index: #{$index}; }
+      $target: $target + 1;
+      $index: $index - 1;
+      }
+    }
+}

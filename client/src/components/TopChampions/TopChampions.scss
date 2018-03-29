@@ -1,0 +1,24 @@
+@import "../../assets/styles/variables.scss";
+
+.solo, .duo, .trio {
+  margin-bottom: 2rem;
+}
+
+@mixin theme-color($color) {
+  .top-color { color: $color; }
+  .data {
+    color: $color;
+    border-color: $color;
+  }
+}
+.solo {
+  @include theme-color($pop-purple);
+}
+
+.duo {
+  @include theme-color($turquoise);
+}
+
+.trio {
+  @include theme-color($pink);
+}
