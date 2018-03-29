@@ -6,6 +6,7 @@ import Header from './Header/Header';
 import Nav from './Nav/Nav';
 import TopChampions from './TopChampions/TopChampions';
 import ChampionsStats from './ChampionsStats/ChampionsStats';
+import ChampionPage from './ChampionPage/ChampionPage';
 
 // Data import
 import { topSoloDatas, topDuoDatas, topTrioDatas } from '../datasBDD/topBDD'
@@ -41,8 +42,9 @@ class App extends Component {
           <Header />
           <Nav />
           <Route exact path="/" render={() => <TopChampions topBDD={topBDD} />} />
-          <Route path="/champions-stats" component={ChampionsStats} />
-          <Route path="/best-synergies" component={ChampionsStats} />
+          <Route exact path="/champions-stats" component={ChampionsStats} />
+          <Route exact path="/champions-stats/:champion" component={ChampionPage} />
+          {/* <Route exact path="/best-synergies" component={ChampionsStats} /> */}
         </Fragment>
       </Router>
     );
