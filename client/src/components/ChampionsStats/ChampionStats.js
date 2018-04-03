@@ -25,16 +25,20 @@ const ChampionStats = () => {
             <p className="label">Pick rate</p>
           </div>
           <ul className="average-stats">
-            <li>Average damage
+            <li class="average-damage">
+              <p>Average damage</p>
               <span className="data">250</span>
             </li>
-            <li>Average healing
+            <li class="average-healing">
+              <p>Average healing</p>
               <span className="data">150</span>
             </li>
-            <li>Average disable
+            <li class="average-disable">
+              <p>Average disable</p>
               <span className="data">400</span>
             </li>
-            <li>Average score
+            <li class="average-score">
+              <p>Average score</p>
               <span className="data">800</span>
             </li>
           </ul>
