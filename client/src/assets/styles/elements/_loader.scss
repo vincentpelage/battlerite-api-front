@@ -1,0 +1,31 @@
+.loader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  svg {
+    border: 2px solid;
+    border-radius: 50%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 0.2rem;
+    margin: 0 0.5rem;
+    &.turquoise {
+      fill: $turquoise;
+      border-color: $turquoise;
+      animation: rotate 1s infinite 0s ease-in-out;
+    }
+    &.pop-purple {
+      fill: $pop-purple;
+      border-color: $pop-purple;
+      animation: rotate 1s infinite 0.1s ease-in-out;
+    }
+    &.pink {
+      fill: $pink;
+      border-color: $pink;
+      animation: rotate 1s infinite 0.2s ease-in-out;
+    }
+  }
+}

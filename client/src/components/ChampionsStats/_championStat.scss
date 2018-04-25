@@ -1,0 +1,143 @@
+.champions-stats {
+  a:hover {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.card-details {
+  position: relative;
+  margin-bottom: 3rem;
+  transition: $transition-base;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 3.5rem;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    opacity: 0.5;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .card-image {
+    position: relative;
+    text-align: center;
+    height: 125px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    p {
+      font-family: $font-family-header;
+      font-size: 24px;
+      font-weight: $font-weight-bold;
+      text-transform: capitalize;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .card-data {
+    background-color: $purple;
+    padding: 1rem;
+    .data {
+      font-family: $font-family-header;
+      font-weight: $font-weight-bold;
+      font-style: italic;
+      margin-bottom: 3px;
+      font-size: 14px;
+    }
+    .label {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .win-rate {
+      display: inline-block;
+      width: 50%;
+      padding-right: 5px;
+      .data {
+        color: $turquoise;
+      }
+      .progress-bar {
+        background-color: $turquoise;
+      }
+    }
+
+    .pick-rate {
+      display: inline-block;
+      width: 50%;
+      padding-left: 5px;
+      .data {
+        color: $pop-purple;
+      }
+
+      .progress-bar {
+        background-color: $pop-purple;
+        width: 50%;
+      }
+    }
+
+    .average-stats {
+      list-style-type: none;
+      margin-bottom: 0;
+      li {
+        position: relative;
+        margin-bottom: 0.5rem;
+
+        p {
+          display: inline-block;
+          margin-bottom: 0;
+          width: 75%;
+          font-size: 14px;
+        }
+        .data {
+          width: 25%;
+          display: inline-block;
+          text-align: right;
+        }
+      }
+
+      li::before {
+        content: "";
+        background-size: cover;
+        position: absolute;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -2.5rem;
+        width: 20px;
+        height: 20px;
+      }
+
+      li:last-child {
+        margin-top: 2rem;
+        margin-bottom: 0;
+      }
+
+      .average-damage::before {
+        background-image: url("../assets/icons/sword.png");
+      }
+
+      .average-healing::before {
+        background-image: url("../assets/icons/cardiogram.png");
+      }
+
+      .average-disable::before {
+        background-image: url("../assets/icons/padlock.png");
+      }
+
+      .average-score::before {
+        background-image: url("../assets/icons/star.png");
+      }
+    }
+  }
+}

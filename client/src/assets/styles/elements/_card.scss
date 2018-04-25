@@ -1,0 +1,51 @@
+@import "../variables.scss";
+@import "../mixins/breakpoints.scss";
+
+.card {
+  background-color: $light-purple;
+  margin-bottom: 1rem;
+}
+
+.card-champion {
+  padding: 1rem 10px;
+  @include media-breakpoint-up(sm) {
+    padding: 1rem 5px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 1rem 1rem;
+  }
+}
+
+.card-graph {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow: auto;
+  @include media-breakpoint-up(sm) {
+    padding: 2rem 1rem;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 3rem 2rem;
+  }
+}
+
+.card-matrix {
+  // height: 300px; // en attendant ChartJS
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-table {
+  overflow: auto;
+}
+
+.card-mosaic {
+  padding: 1rem 0.5rem;
+  @include media-breakpoint-up(lg) {
+    padding: 2rem 1rem;
+  }
+}

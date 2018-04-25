@@ -1,0 +1,33 @@
+@import "../../assets/styles/variables.scss";
+
+.solo, .duo, .trio {
+  margin-bottom: 2rem;
+}
+
+@mixin theme-color($color) {
+  .top-color { color: $color; }
+  .data {
+    color: $color;
+    border-color: $color;
+  }
+}
+.solo {
+  @include theme-color($pop-purple);
+  .btn-outline {
+    @include btn-outline-effect($white, transparent, $white, $white, $pop-purple, $pop-purple);
+  }
+}
+
+.duo {
+  @include theme-color($turquoise);
+  .btn-outline {
+    @include btn-outline-effect($white, transparent, $white, $white, $turquoise, $turquoise);
+  }
+}
+
+.trio {
+  @include theme-color($pink);
+  .btn-outline {
+    @include btn-outline-effect($white, transparent, $white, $white, $pink, $pink);
+  }
+}

@@ -1,0 +1,26 @@
+.progress {
+  position: relative;
+  background-color: $dark-purple;
+  border-radius: $progress-border-radius;
+  .progress-bar {
+    position: absolute;
+    bottom: 0;
+    border-radius: $progress-border-radius;
+  }
+}
+
+.progress-vertical {
+  width: $progress-vertical-width;
+  height: $progress-vertical-height;
+  .progress-bar {
+    width: $progress-vertical-width;
+  }
+}
+
+.progress-horizontal {
+  width: $progress-horizontal-width;
+  height: $progress-horizontal-height;
+  .progress-bar {
+    height: $progress-horizontal-height;
+  }
+}

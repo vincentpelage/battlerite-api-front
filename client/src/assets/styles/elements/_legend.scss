@@ -1,0 +1,29 @@
+@import "../mixins/legend.scss";
+
+.legend {
+  padding-left: $legend-margin-left-mobile;
+  @include media-breakpoint-up(sm) {
+    padding-left: $legend-margin-left-desktop;
+  }
+  p {
+    font-size: 12px;
+  }
+  .turquoise {
+    position: relative;
+    &::before {
+      @include legend($turquoise);
+    }
+  }
+  .pop-purple {
+    position: relative;
+    &::before {
+      @include legend($pop-purple);
+    }
+  }
+  .pink {
+    position: relative;
+    &::before {
+      @include legend($pink);
+    }
+  }
+}

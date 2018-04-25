@@ -1,0 +1,21 @@
+@mixin font_face( $path, $ft_name, $ft_alias, $ft_weight, $ft_style ) {
+  @font-face {
+    font-family: $ft_alias;
+		src: url( $path+$ft_name+'.eot');
+		src: url( $path+$ft_name+'.eot?#iefix') format('embedded-opentype'),
+		url( $path+$ft_name+'.woff') format('woff'),
+		url( $path+$ft_name+'.ttf') format('truetype'),
+		url( $path+$ft_name+'.svg#'+ft_alias) format('svg');
+		font-weight: $ft_weight;
+		font-style: $ft_style;
+    font-display: swap;
+  }
+}
+
+@include font_face( '../assets/fonts/Exo/', 'Exo-Regular', 'Exo', 500, 'normal' );
+@include font_face( '../assets/fonts/Exo/', 'Exo-BoldItalic', 'Exo', 700, 'italic' );
+@include font_face( '../assets/fonts/Exo/', 'Exo-Bold', 'Exo', 700, 'normal' );
+
+@include font_face( '../assets/fonts/Roboto/', 'Roboto-Regular', 'Roboto', 400, 'normal' );
+@include font_face( '../assets/fonts/Roboto/', 'Roboto-Bold', 'Roboto', 700, 'normal' );
+@include font_face( '../assets/fonts/Roboto/', 'Roboto-Light', 'Roboto', 300, 'normal' );

@@ -1,0 +1,95 @@
+.performance-per-league {
+  .legend-wrapper {
+    display: flex;
+
+  }
+  .legend-matrice {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 65px;
+
+    @include media-breakpoint-up(sm) {
+      flex-direction: row;
+      align-items: center;
+      height: 50px;
+    }
+  }
+  .legend-table {
+    height: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .legend {
+    p {
+      margin-bottom: 1rem;
+      padding-right: 1rem;
+      text-transform: capitalize;
+    }
+  }
+
+  // Matrix
+
+
+  .unit {
+    font-family: $font-family-header;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  // Table
+  .card-table {
+    table {
+      width: 100%;
+      line-height: 1.2;
+
+      thead {
+        background-color: $purple;
+        th {
+          font-weight: $font-weight-normal;
+          font-size: 12px;
+          @include media-breakpoint-up(sm) {
+            font-size: 14px;
+          }
+        }
+        th:first-child {
+          @include media-breakpoint-up(sm) {
+            width: 20%;
+          }
+        }
+        th:not(:first-child) {
+          // width: calc(100% / 5);
+          text-align: center;
+          padding: 5px 5px;
+          @include media-breakpoint-up(sm) {
+            width: calc(80% / 5);
+          }
+        }
+      }
+      tbody {
+        td {
+          padding: 8px 5px;
+        }
+        td:not(:first-child) {
+          text-align: center;
+        }
+        tr:nth-child(odd) {
+          color: $turquoise;
+        }
+        tr:nth-child(even) {
+          color: $pop-purple;
+        }
+        td:first-child {
+          font-size: 12px;
+          text-transform: capitalize;
+          padding-left: 0.5rem;
+          color: white;
+          @include media-breakpoint-up(sm) {
+            font-size: 14px;
+            padding-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

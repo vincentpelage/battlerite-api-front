@@ -1,0 +1,24 @@
+.best-synergies {
+  h3 {
+    margin-bottom: 1rem;
+    display: block;
+  }
+  input {
+    display: block;
+    width: 150px;
+    transition: $transition-base;
+    &:focus {
+      width: 250px;
+    }
+    @include media-breakpoint-up(md) {
+      width: 180px;
+      &:focus, &:hover {
+        width: 280px;
+      }
+    }
+  }
+  .data {
+    color: $turquoise;
+    border-color: $turquoise;
+  }
+}

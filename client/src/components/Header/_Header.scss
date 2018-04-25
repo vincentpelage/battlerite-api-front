@@ -1,0 +1,77 @@
+@import '../../assets/styles/mixins/breakpoints.scss';
+
+$banner-height-mobile: 290px;
+$banner-height-desktop: 450px;
+
+.header {
+  min-height: $banner-height-mobile;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: $banner-height-mobile;
+  }
+  .h2 span {
+    background-image: linear-gradient(
+    	to right,
+	    $pop-purple,
+	    $pop-purple 50%,
+	    $turquoise 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s;
+    &:hover {
+      transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+      background-position: 0%;
+    }
+  }
+  svg {
+    height: 40px;
+    vertical-align: top;
+    fill: $turquoise;
+    animation: flashlight 0.5s;
+    transition: all 0.5s;
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    min-height: $banner-height-desktop;
+    background-position: top;
+    .flex {
+      height: $banner-height-desktop;
+    }
+    svg {
+      height: 65px;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    background-position: 0 -75px;
+  }
+}
+
+.quote-wrapper{
+  position: relative;
+  .left, .right {
+    position: absolute;
+    top: -0.5rem;
+    height: 25px;
+  }
+  .left {
+    left: -1.5rem;
+    transform: scaleX(-1);
+  }
+  .right {
+    right: -1.5rem;
+  }
+}

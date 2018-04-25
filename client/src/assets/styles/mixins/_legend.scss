@@ -1,0 +1,13 @@
+@mixin legend($color) {
+  content: '';
+  position: absolute;
+  top: $legend-top;
+  left: -$legend-margin-left-mobile;
+  height: $legend-height;
+  width: $legend-width;
+  background-color: $color;
+  border-radius: $legend-border-radius;
+  @include media-breakpoint-up(sm) {
+    left: -$legend-margin-left-desktop;
+  }
+}

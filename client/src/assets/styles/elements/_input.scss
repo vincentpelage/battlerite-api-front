@@ -1,0 +1,42 @@
+input {
+  background-color: $purple;
+  color: white;
+  border: $input-border-width;
+  outline: $input-outline;
+  font-size: $input-font-size-mobile;
+  font-weight: $input-font-weight;
+  padding: $input-padding-y-mobile $input-padding-x-mobile $input-padding-y-mobile 2rem;
+  &::-webkit-input-placeholder {
+    color: rgba($white, 0.5);
+    font-size: $input-font-size-mobile * 0.8;
+  }
+  @include media-breakpoint-up(md) {
+    padding: $input-padding-y $input-padding-x $input-padding-y 2rem;
+    font-size: $input-font-size ;
+    &::-webkit-input-placeholder {
+      font-size: $input-font-size * 0.8;
+    }
+  }
+}
+
+.input-search {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  &::before {
+    content: '';
+    background-image: url('../assets/icons/search.png');
+    background-size: cover;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%) rotate(0deg);
+    transition: $transition-base;
+  }
+  &:hover::before {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}

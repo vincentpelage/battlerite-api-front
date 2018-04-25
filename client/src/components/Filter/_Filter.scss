@@ -1,0 +1,15 @@
+.filter {
+  overflow: auto;
+}
+
+.filter-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.period {
+  font-size: 10px;
+  font-style: italic;
+  text-decoration: underline;
+}

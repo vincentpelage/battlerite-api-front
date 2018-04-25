@@ -1,0 +1,57 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  outline: none;
+	position: relative;
+	transition: $transition-base;
+  cursor: pointer;
+  border: $btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-mobile, $btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+
+  @include media-breakpoint-up(sm) {
+    font-size: $btn-font-size;
+  }
+  // Share hover and focus styles
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    // box-shadow: $btn-focus-box-shadow;
+  }
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	transition: $transition-base;
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

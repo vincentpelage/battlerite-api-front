@@ -1,0 +1,40 @@
+// Bootstrap + Mixins
+@import './assets/styles/mixins/breakpoints.scss';
+@import './assets/styles/mixins/grid-framework.scss';
+@import './assets/styles/mixins/grid.scss';
+@import './assets/styles/mixins/font.scss';
+@import './assets/styles/mixins/transition.scss';
+@import './assets/styles/mixins/buttons.scss';
+@import './assets/styles/mixins/z-index.scss';
+@import './assets/styles/mixins/keyframes.scss';
+
+// Variables
+@import './assets/styles/variables.scss';
+@import './assets/styles/reboot.scss';
+@import './assets/styles/grid.scss';
+@import './assets/styles/typo.scss';
+@import './assets/styles/structure.scss';
+
+// Elements
+@import './assets/styles/elements/loader.scss';
+@import './assets/styles/elements/buttons.scss';
+@import './assets/styles/elements/card.scss';
+@import './assets/styles/elements/select.scss';
+@import './assets/styles/elements/progress.scss';
+@import './assets/styles/elements/legend.scss';
+@import './assets/styles/elements/input.scss';
+@import './assets/styles/elements/keyframes.scss';
+
+// Components
+@import './Header/Header.scss';
+@import './Nav/Nav.scss';
+@import './TopChampions/TopChampions.scss';
+@import './Champions/Champion.scss';
+@import './Filter/Filter.scss';
+@import './ChampionPage/ChampionPage.scss';
+@import './ChampionPage/WinRate.scss';
+@import './ChampionPage/Performance.scss';
+@import './BestSynergies/BestSynergies.scss';
+@import './BestSynergies/ChampionsMosaic.scss';
+@import './ChampionsStats/championStat.scss';
+@import './NotFound/NotFound.scss';

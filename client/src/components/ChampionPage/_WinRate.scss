@@ -1,0 +1,69 @@
+@import "../../assets/styles/mixins/legend.scss";
+
+@mixin progress($progress-value, $color, $side, $padding-right, $padding-left) {
+  color: $color;
+  text-align: $side;
+  position: relative;
+  padding-right: $padding-right;
+  padding-left: $padding-left;
+
+  .progress {
+    float: $side;
+    .progress-bar {
+      background-color: $color;
+      height: $progress-vertical-height * $progress-value;
+    }
+  }
+}
+
+.winrate-per-league {
+  .period {margin-bottom: 0; }
+  
+  .legend {
+    p {
+      font-family: $font-family-header;
+      font-weight: bold;
+      line-height: 1.4;
+      display: inline-block;
+      margin-right: 3rem;
+      span {
+        margin-left: -$legend-margin-left-mobile;
+        @include media-breakpoint-up(sm) {
+          margin-left: -$legend-margin-left-desktop;
+        }
+      }
+    }
+  }
+
+  .league {
+    text-align: center;
+    margin-right: 1.5rem;
+    @include media-breakpoint-up(sm) {
+      margin-right: 0.5rem;
+    }
+    @include media-breakpoint-down(sm) {
+      flex-basis: 28%;
+      flex-shrink: 0;
+    }
+
+    .deux-v-deux, .trois-v-trois{
+      width: 50%;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .deux-v-deux {
+      @include progress(0.52, $turquoise, right, 0.5rem, 0);
+    }
+    .trois-v-trois {
+      @include progress(0.64, $pop-purple, left, 0, 0.5rem);
+    }
+    .label {
+      font-size: 12px;
+      margin: 0;
+      text-transform: capitalize;
+      @include media-breakpoint-up(lg) {
+        font-size: 14px;
+      }
+    }
+  }
+}

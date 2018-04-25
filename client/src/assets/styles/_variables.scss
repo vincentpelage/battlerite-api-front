@@ -1,0 +1,168 @@
+// Variables
+//
+$enable-grid-classes:       true !default;
+
+//
+// Color system
+//
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$dark-purple: #1E202E !default;
+$purple: #3C3F5B !default;
+$light-purple: #282A3C !default;
+$pop-purple: #8083FF !default;
+$turquoise: #61D1E5 !default;
+$pink: #A03865 !default;
+
+// Body
+$body-bg:                   $dark-purple !default;
+$body-color:                $white !default;
+
+// Links
+$link-color:                $white !default;
+$link-decoration:           none !default;
+$link-hover-color:          darken($link-color, 15%) !default;
+$link-hover-decoration:     underline !default;
+
+// Spacer
+$spacer: 1rem !default;
+
+// Paragraphs
+$paragraph-margin-bottom:   1rem !default;
+
+// headings
+$headings-margin-bottom:      ($spacer / 2) !default;
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  xs-bis: 360px,
+  xs-ter: 375px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+// @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+// @include _assert-starts-at-zero($grid-breakpoints);
+
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+// @include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+// Grid columns
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+
+// Components
+$border-width:                1px !default;
+$border-radius:               0 !default;
+
+$transition-base:             all .3s ease-in-out !default;
+$transition-fade:             opacity .15s linear !default;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-base:            'Roboto' !default;
+$font-family-header:          'Exo' !default;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          300 !default;
+$font-weight-normal-header:   700 !default;
+$font-weight-bold:            700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+$small-font-size:             80% !default;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               .200rem !default;
+$btn-padding-x:               .65rem !default;
+$btn-line-height:             $line-height-base !default;
+
+$btn-border-width:            $border-width !default;
+$btn-font-size:               12px !default;
+$btn-font-size-mobile:        10px !default;
+$btn-font-weight:             $font-weight-normal !default;
+$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+$btn-focus-width:             .2rem !default;
+// $btn-focus-box-shadow:        0 0 0 $btn-focus-width $btn-focus-color !default;
+$btn-disabled-opacity:        .65 !default;
+$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+
+$btn-block-spacing-y:         .5rem !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           $border-radius !default;
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+// select
+$select-padding-y:               .200rem !default;
+$select-padding-x:               .8rem !default;
+$select-line-height:             $line-height-base !default;
+
+$select-border-width:            $border-width !default;
+$select-font-size:               12px !default;
+$select-font-size-mobile:        12px !default;
+$select-font-weight:             $font-weight-normal !default;
+$select-border-radius:           $border-radius !default;
+$select-outline:                 none !default;
+
+// input
+$input-padding-y:               .200rem !default;
+$input-padding-x:               .65rem !default;
+$input-padding-y-mobile:        .200rem !default;
+$input-padding-x-mobile:        .65rem !default;
+$input-line-height:             $line-height-base !default;
+
+$input-border-width:            none !default;
+$input-font-size:               14px !default;
+$input-font-size-mobile:        12px !default;
+$input-font-weight:             $font-weight-normal !default;
+$input-border-radius:           $border-radius !default;
+$input-outline:                 none !default;
+
+
+// progress bar
+$progress-border-radius: 2rem;
+$progress-horizontal-width: 100%;
+$progress-horizontal-height: 0.5rem;
+$progress-vertical-width: 0.5rem;
+$progress-vertical-height: 5rem;
+
+// legend
+$legend-top: 0.25rem;
+$legend-margin-left-mobile: 1.5rem;
+$legend-margin-left-desktop: 1.5rem;
+$legend-height: 8px;
+$legend-width: 18px;
+$legend-border-radius: 2rem;
