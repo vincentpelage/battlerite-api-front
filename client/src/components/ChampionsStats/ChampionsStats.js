@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import FlipMove from 'react-flip-move';
+import LazyLoad from 'react-lazyload';
 
 // local import
 import Header from '../Header/Header';
@@ -63,7 +64,9 @@ class ChampionsStats extends Component {
 
     return (
       <Fragment>
-        <Header />
+        <LazyLoad height={200}>
+          <Header />
+        </LazyLoad>
         <Nav />
         <Filter
           handleChangeSortBy={this.handleChangeSortBy}

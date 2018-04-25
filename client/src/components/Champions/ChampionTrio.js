@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazyload';
 
 // local import
 import getActor from './utils/getActor';
@@ -12,9 +13,11 @@ const ChampionTrio = ({ data, actorId1, actorId2, actorId3 }) => {
   return (
     <div className="card card-champion">
       <div className="card-image">
-        <img src={actor1[0].image} alt={actor1[0].name}/>
-        <img src={actor2[0].image} alt={actor2[0].name}/>
-        <img src={actor3[0].image} alt={actor3[0].name}/>
+        <LazyLoad height={200}>
+          <img src={actor1[0].image} alt={actor1[0].name}/>
+          <img src={actor2[0].image} alt={actor2[0].name}/>
+          <img src={actor3[0].image} alt={actor3[0].name}/>
+        </LazyLoad>
       </div>
       <p className="content">{actor1[0].name} - {actor2[0].name} - {actor3[0].name}</p>
       <p className="data">{data} %</p>
