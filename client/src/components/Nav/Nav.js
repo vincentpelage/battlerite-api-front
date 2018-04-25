@@ -7,15 +7,21 @@ const Nav = () => (
       <div className="row">
         <div className="col-12">
           <ul>
-            <li>
-              <Link to="/"><span data-hover="Top Champions">Top Champions</span></Link>
-            </li>
-            <li>
-              <Link to="/champions-stats"><span data-hover="Champion's Stats">Champion's Stats</span></Link>
-            </li>
-            <li>
-              <Link to="/best-synergies"><span data-hover="Best Synergies">Best Synergies</span></Link>
-            </li>
+            <Link to="/">
+              <li>
+                <span data-hover="Top Champions">Top Champions</span>
+              </li>
+            </Link>
+            <Link to="/champions-stats">
+              <li>
+                <span data-hover="Champion's Stats">Champion's Stats</span>
+              </li>
+            </Link>
+            <Link to="/best-synergies">
+              <li>
+                <span data-hover="Best Synergies">Best Synergies</span>
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
