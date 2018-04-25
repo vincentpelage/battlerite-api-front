@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Exo";
   src: url("../assets/fonts/Exo/Exo-Regular.eot");
-  src: url("../assets/fonts/Exo/Exo-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Exo/Exo-Regular.woff") format("woff"), url("../assets/fonts/Exo/Exo-Regular.ttf") format("truetype"), url("../assets/fonts/Exo/Exo-Regular.svg#ft_alias") format("svg");
+  src: url("../assets/fonts/Exo/Exo-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Exo/Exo-Regular.woff") format("woff"), url("../assets/fonts/Exo/Exo-Regular.ttf") format("truetype");
   font-weight: 500;
   font-style: "normal";
   font-display: swap; }
@@ -9,7 +9,7 @@
 @font-face {
   font-family: "Exo";
   src: url("../assets/fonts/Exo/Exo-BoldItalic.eot");
-  src: url("../assets/fonts/Exo/Exo-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Exo/Exo-BoldItalic.woff") format("woff"), url("../assets/fonts/Exo/Exo-BoldItalic.ttf") format("truetype"), url("../assets/fonts/Exo/Exo-BoldItalic.svg#ft_alias") format("svg");
+  src: url("../assets/fonts/Exo/Exo-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Exo/Exo-BoldItalic.woff") format("woff"), url("../assets/fonts/Exo/Exo-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: "italic";
   font-display: swap; }
@@ -17,7 +17,7 @@
 @font-face {
   font-family: "Exo";
   src: url("../assets/fonts/Exo/Exo-Bold.eot");
-  src: url("../assets/fonts/Exo/Exo-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Exo/Exo-Bold.woff") format("woff"), url("../assets/fonts/Exo/Exo-Bold.ttf") format("truetype"), url("../assets/fonts/Exo/Exo-Bold.svg#ft_alias") format("svg");
+  src: url("../assets/fonts/Exo/Exo-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Exo/Exo-Bold.woff") format("woff"), url("../assets/fonts/Exo/Exo-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: "normal";
   font-display: swap; }
@@ -25,7 +25,7 @@
 @font-face {
   font-family: "Roboto";
   src: url("../assets/fonts/Roboto/Roboto-Regular.eot");
-  src: url("../assets/fonts/Roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype"), url("../assets/fonts/Roboto/Roboto-Regular.svg#ft_alias") format("svg");
+  src: url("../assets/fonts/Roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: "normal";
   font-display: swap; }
@@ -33,7 +33,7 @@
 @font-face {
   font-family: "Roboto";
   src: url("../assets/fonts/Roboto/Roboto-Bold.eot");
-  src: url("../assets/fonts/Roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Roboto/Roboto-Bold.woff") format("woff"), url("../assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype"), url("../assets/fonts/Roboto/Roboto-Bold.svg#ft_alias") format("svg");
+  src: url("../assets/fonts/Roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Roboto/Roboto-Bold.woff") format("woff"), url("../assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: "normal";
   font-display: swap; }
@@ -41,7 +41,7 @@
 @font-face {
   font-family: "Roboto";
   src: url("../assets/fonts/Roboto/Roboto-Light.eot");
-  src: url("../assets/fonts/Roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Roboto/Roboto-Light.woff") format("woff"), url("../assets/fonts/Roboto/Roboto-Light.ttf") format("truetype"), url("../assets/fonts/Roboto/Roboto-Light.svg#ft_alias") format("svg");
+  src: url("../assets/fonts/Roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Roboto/Roboto-Light.woff") format("woff"), url("../assets/fonts/Roboto/Roboto-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: "normal";
   font-display: swap; }

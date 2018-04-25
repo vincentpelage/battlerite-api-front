@@ -4,8 +4,8 @@
 		src: url( $path+$ft_name+'.eot');
 		src: url( $path+$ft_name+'.eot?#iefix') format('embedded-opentype'),
 		url( $path+$ft_name+'.woff') format('woff'),
-		url( $path+$ft_name+'.ttf') format('truetype'),
-		url( $path+$ft_name+'.svg#'+ft_alias) format('svg');
+		url( $path+$ft_name+'.ttf') format('truetype');
+		// url( $path+$ft_name+'.svg#'+ft_alias) format('svg');
 		font-weight: $ft_weight;
 		font-style: $ft_style;
     font-display: swap;
