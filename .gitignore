@@ -1,6 +1,8 @@
 # dependencies
-/node_modules
-
+node_modules
+/client/node_modules
+/build
+/public
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
