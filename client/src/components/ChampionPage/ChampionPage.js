@@ -19,7 +19,7 @@ const ChampionPage = ({ championStats }) => {
     const currentActor = actors.filter(actor => actor.path === getPathname());
     if (currentActor.length == 0) {
 
-      window.location.replace('http://localhost:3000/champion-not-found');
+      window.location.replace('https://limitless-wave-12645.herokuapp.com/champion-not-found');
     } else {
       return currentActor[0].id;
     }

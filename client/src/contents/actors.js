@@ -97,7 +97,7 @@ const actors = [
     banner: JumongBanner,
     path: '/champions-stats/jumong',
     h1: 'Jumong',
-    h2: ['Another game, another hunt.', 'My bow, my pride.', 'Don\'t throw caution to the wind.', 'My bow is eager for new prey.', 'They won\'t know what hit them.'],
+    h2: ['Another game, another hunt', 'My bow, my pride', 'Don\'t throw caution to the wind', 'My bow is eager for new prey', 'They won\'t know what hit them'],
     intro: 'Jumong is a trophy collector who has wandered the wildlands in the pursuit of a worthy challenge. No longer content with hunting the great beasts of the world, has led him to enter the arena looking for a new type of prey. He traps his foes and ends them with a well placed shot from his mighty bow.',
   },
   {
@@ -108,7 +108,7 @@ const actors = [
     banner: LucieBanner,
     path: '/champions-stats/lucie',
     h1: 'Lucie',
-    h2: ['These chemicals are cooked and ready for battle!', 'I just love what\'s brewing in the crowd.', 'Ahaha, oh, it\'s starting!', 'Oh, I\'m reacting with the crowd, I\'m brewing!'],
+    h2: ['These chemicals are cooked and ready for battle', 'I just love what\'s brewing in the crowd', 'Ahaha, oh, it\'s starting', 'Oh, I\'m reacting with the crowd, I\'m brewing'],
     intro: 'Lucie is a highly skilled Alchemist. A rebel at school who got expelled from the Toleen Academy for mixing banned potions. She is a diverse contender who knows which brew makes you choke, heal or flee in fear. The arena has become her new playground for wild experiments. Seeing her smile while mixing ingredients of an unknown nature might make her look more crazy than cute.',
   },
   {
@@ -119,7 +119,7 @@ const actors = [
     banner: ShifuBanner,
     path: '/champions-stats/shifu',
     h1: 'Shifu',
-    h2: ['We cannot fail, and they cannot win.', 'There is no secret to winning. Just do it!', 'Defeat your inner demons. Hopefully, they\'re on the enemy team.', 'Mind and body warmed up. Spear, sharp!'],
+    h2: ['We cannot fail, and they cannot win', 'There is no secret to winning. Just do it!', 'Defeat your inner demons. Hopefully, they\'re on the enemy team.', 'Mind and body warmed up. Spear, sharp!'],
     intro: 'Expert in the martial art of Ni’Shu and master of the spear. A highly mobile and dangerous duelist, his extraordinary combat prowess culminates in a range of deadly melee attacks. Trained to hunt down his opponents and move like the wind, facing Shifu is like walking into a tornado of spearheads.',
   },
   {
@@ -130,7 +130,7 @@ const actors = [
     banner: EzmoBanner,
     path: '/champions-stats/ezmo',
     h1: 'Ezmo',
-    h2: ['Hurry, hurry, let\'s fight!', 'We bring the pain.', 'We are up to no good.', 'Time for mischief.', 'Let\'s wreck the place!'],
+    h2: ['Hurry, hurry, let\'s fight!', 'We bring the pain', 'We are up to no good', 'Time for mischief', 'Let\'s wreck the place!'],
     intro: 'Ezmo was once imprisoned by the warlock, Aradu The Reserved, but managed to escape when his captor was too engrossed in reading his tome. Ezmo sealed Aradu\'s soul within the book, creating the Lost Soul Grimoire, and has carried it ever since. When he isn\'t playing tricks on people, Ezmo is searching for a way back to his home dimension.',
   },
   {
@@ -152,7 +152,7 @@ const actors = [
     banner: IvaBanner,
     path: '/champions-stats/iva',
     h1: 'Iva',
-    h2: ['I hear we got some cleanin to do. Haha!', 'No one grows old. Age, you choose.', 'Follow my lead. No! My lead! First verb, second noun!', 'I\'ve been ready for a long time.', 'Hoh my, what a wonderful time to be young.'],
+    h2: ['I hear we got some cleanin to do. Haha!', 'No one grows old. Age, you choose.', 'Follow my lead. No! My lead! First verb, second noun!', 'I\'ve been ready for a long time', 'Hoh my, what a wonderful time to be young.'],
     intro: 'A scavenger from the outer realms. Iva has engineered her own arsenal of weapons. Firing crazy rockets or unleashing a storm of bullets is her way of greeting her opponents in the Arena.',
   },
   {
@@ -163,7 +163,7 @@ const actors = [
     banner: JadeBanner,
     path: '/champions-stats/jade',
     h1: 'Jade',
-    h2: ['My guns are ready and loaded.', 'Vengeance can wait, while I settle this.', 'Let\'s get this over with.', 'Eye for an eye. Bullet for victory.'],
+    h2: ['My guns are ready and loaded', 'Vengeance can wait, while I settle this', 'Let\'s get this over with', 'Eye for an eye. Bullet for victory.'],
     intro: 'A mysterious gunslinger with a score to settle. Born with eagle-eyes and armed with a lethal sniper rifle, Jade’s pinpoint accuracy is a serious threat for anyone who enters the arena. For close encounters she prefers a good old combination of stealth and homemade revolvers. The rumor says Jade joined the arena games to find the villain who killed her brother. Will she complete her dark quest of vengeance?',
   },
   {
@@ -174,7 +174,7 @@ const actors = [
     banner: Ruh_KaanBanner,
     path: '/champions-stats/ruh_kaan',
     h1: 'Ruh_kaan',
-    h2: ['I will collect what\'s mine!', 'Don\'t stand in my way!', 'I will leave the tomb behind.', 'I will curse them all!', 'Death comes!'],
+    h2: ['I will collect what\'s mine!', 'Don\'t stand in my way!', 'I will leave the tomb behind', 'I will curse them all!', 'Death comes!'],
     intro: 'Ruh Kaan was awoken when a grave robber desecrated the sacred crypts Ark\'Dun. Pursuing the trespasser led him to the Arenas where he is still tracking his quarry. He wields his dark powers to remove those who would stand in his way, taking great pleasure in consuming their souls.',
   },
   {
@@ -185,7 +185,7 @@ const actors = [
     banner: OldurBanner,
     path: '/champions-stats/oldur',
     h1: 'Oldur',
-    h2: ['The sand runs in my veins.', 'The flow of suns and moons.', 'Repeat with lessons learned.', 'It begins... again.', 'No time to lose.', 'I remember this battle. It was an exciting one.'],
+    h2: ['The sand runs in my veins', 'The flow of suns and moons', 'Repeat with lessons learned', 'It begins... again.', 'No time to lose', 'I remember this battle. It was an exciting one.'],
     intro: 'Oldur is a mysterious creature able to bend time and space. He can mend wounds with powerful heals and reverse enemy attacks by freezing them in time.',
   },
   {
@@ -207,7 +207,7 @@ const actors = [
     banner: VareshBanner,
     path: '/champions-stats/varesh',
     h1: 'Varesh',
-    h2: ['We stand with you.', 'To show them our ways.', 'The line is hazed.', 'Life and death as one.', 'Torun haska gor burrum.'],
+    h2: ['We stand with you', 'To show them our ways', 'The line is hazed', 'Life and death as one', 'Torun haska gor burrum'],
     intro: 'A being formed by the energies of others. Varesh uses his power to weaken and disrupt his enemies. By combining his powers he is able to unleash devastating attacks.',
   },
   {
@@ -218,7 +218,7 @@ const actors = [
     banner: PearlBanner,
     path: '/champions-stats/pearl',
     h1: 'Pearl',
-    h2: ['Just follow my lead!', 'I know what\'s good for us!', 'On a wave to success!', 'Ready for a good laugh?', 'Time to face these jokers.'],
+    h2: ['Just follow my lead!', 'I know what\'s good for us!', 'On a wave to success!', 'Ready for a good laugh?', 'Time to face these jokers'],
     intro: 'Pearl is a sage able to control the oceans and whatever creatures that lurk below. Pearl transforms water into volatile attacks, rejuvenating streams and protecting bubbles.',
   },
   {
@@ -229,7 +229,7 @@ const actors = [
     banner: TayaBanner,
     path: '/champions-stats/taya',
     h1: 'Taya',
-    h2: ['Got the winds in our backs!', 'Get pumped, baby! It\'s time to own these punks!', 'Got the winds in our backs.', 'Let\'s round \'em up like cattle.'],
+    h2: ['Got the winds in our backs!', 'Get pumped, baby! It\'s time to own these punks!', 'Got the winds in our backs', 'Let\'s round \'em up like cattle.'],
     intro: 'An exceptionally swift hunter wielding a razor sharp boomerang. By shaping the wind around her taya is able to increase her speed and control her boomerang with deadly precision.',
   },
   {
@@ -251,7 +251,7 @@ const actors = [
     banner: CroakBanner,
     path: '/champions-stats/croak',
     h1: 'Croak',
-    h2: ['My tongue is sharp, as my blade.', 'I cut, straight through.', 'I wait for the opportune moment.', 'I strike, when noone is looking.', 'I vanish, I spit, I cut - I do everything!'],
+    h2: ['My tongue is sharp, as my blade.', 'I cut, straight through', 'I wait for the opportune moment', 'I strike, when noone is looking.', 'I vanish, I spit, I cut - I do everything!'],
     intro: 'His background is shrouded in mystery, his movements are supernatural and his reputation is whispered about. Croak loves to surprise his enemies, using his mobility to move in and out. His chameleonic stealth and flexible fighting style makes him exceptionally hard to catch.',
   },
   {
@@ -262,7 +262,7 @@ const actors = [
     banner: FreyaBanner,
     path: '/champions-stats/freya',
     h1: 'Freya',
-    h2: ['Pain is not dangerous; makes you stronger!', 'I\'m brimming with lightning.', 'My friends here can\'t wait.', 'I can\'t wait for the action!'],
+    h2: ['Pain is not dangerous; makes you stronger!', 'I\'m brimming with lightning', 'My friends here can\'t wait', 'I can\'t wait for the action!'],
     intro: 'Once a tribe queen, now a fearless contender. Her titanic hammers and overwhelming power of lighting is the perfect recipe for destruction, slowing down her foes with thundering spells to catch them off guard.',
   },
   {
@@ -273,7 +273,7 @@ const actors = [
     banner: BakkoBanner,
     path: '/champions-stats/bakko',
     h1: 'Bakko',
-    h2: ['Hooh, I\'m getting pumped!', 'Hah! If my ancestors could see me now.', 'Let\'s show the crowd some heroics!', 'I\'ll keep the enemies at bay.'],
+    h2: ['Hooh, I\'m getting pumped!', 'Hah! If my ancestors could see me now', 'Let\'s show the crowd some heroics!', 'I\'ll keep the enemies at bay'],
     intro: 'Bakko has a proud history, filled with bravery and courage. Most known for saving hundreds of people from getting slaughtered by the giants in the north. A heroic brawler armed with axe and shield. Bakko uses his shield to outmaneuver opponents and protect his teammates. Watch out for his earth shattering dash attacks, even calm warriors sometimes go berserk.',
   },
   {
@@ -295,7 +295,7 @@ const actors = [
     banner: PestilusBanner,
     path: '/champions-stats/pestilus',
     h1: 'Pestilus',
-    h2: ['My swarms are restless to fight.', 'I will drain their life.', 'Parasites and vermin I have in abundance.', 'Their blood will sustain the Burrowing God.', 'Noone is more fit to rule.'],
+    h2: ['My swarms are restless to fight', 'I will drain their life', 'Parasites and vermin I have in abundance', 'Their blood will sustain the Burrowing God', 'Noone is more fit to rule'],
     intro: 'Pestilus is the head priest of Quna. He serves the Qunan royal family, but secretly worships an evil deity, Rasal. His schemes manipulated the king into exiling the crown prince. In the arena, Pestilus unleashes swarms of insects to infest and cripple his enemies, releasing his innermost darkest desires.'
   },
   {
@@ -306,7 +306,7 @@ const actors = [
     banner: DestinyBanner,
     path: '/champions-stats/destiny',
     h1: 'Destiny',
-    h2: ['This is going to be a blast!', 'Combat mode ready to go!', 'I just hope I won\'t have to clean up afterwards.', 'I\'ll shoot for a high score!', 'You might wanna wear protective glasses.'],
+    h2: ['This is going to be a blast!', 'Combat mode ready to go!', 'I just hope I won\'t have to clean up afterwards', 'I\'ll shoot for a high score!', 'You might wanna wear protective glasses'],
     intro: 'An elite sky ranger from the secluded, invisible city of Enza. Many years of rigorous combat training using Magi-tech weaponry makes Destiny an agile and deadly force to be reckoned with. Fed up with the strict regulations of living in Enza, Destiny often escapes the city to blow off some steam and have fun in the arena.',
   },
   {
@@ -317,7 +317,7 @@ const actors = [
     banner: RaigonBanner,
     path: '/champions-stats/raigon',
     h1: 'Raigon',
-    h2: ['My sword is ready!', 'A fight or two will keep my skills up.', 'Everyone should know a bit of hand-to-hand combat.', 'Keep your weapon and your wits!', 'My father\'s sword will get good use today.'],
+    h2: ['My sword is ready!', 'A fight or two will keep my skills up', 'Everyone should know a bit of hand-to-hand combat', 'Keep your weapon and your wits!', 'My father\'s sword will get good use today'],
     intro: 'Raigon is the former crown prince of Quna. He was a well-respected figure among the kingdom’s warriors, until he was exiled due to the manipulations of Pestilus. For now, the arena serves as a decent place to find work and set the wheels in motion for his retaliation.',
   },
   {

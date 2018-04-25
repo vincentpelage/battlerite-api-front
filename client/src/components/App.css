@@ -1107,13 +1107,12 @@ template {
 .h2 {
   font-family: "Exo";
   font-size: 18px;
-  padding: 0 3rem;
+  padding: 0 1.5rem;
   line-height: 1.4;
   font-weight: 500; }
   @media (min-width: 576px) {
     .h2 {
-      font-size: 26px;
-      padding: 0; } }
+      font-size: 26px; } }
 
 .h3 {
   font-family: "Exo";
@@ -1637,10 +1636,10 @@ input {
     top: -0.5rem;
     height: 25px; }
   .quote-wrapper .left {
-    left: -1.5rem;
+    left: 0rem;
     transform: scaleX(-1); }
   .quote-wrapper .right {
-    right: -1.5rem; }
+    right: 0rem; }
 
 .nav {
   background-color: #3C3F5B;
@@ -1686,10 +1685,6 @@ input {
         font-weight: 700;
         transform: translate3d(0, 0, 0);
         width: 95px; }
-    .nav a:hover span,
-    .nav a:focus span {
-      transform: translateY(-100%);
-      color: #fff; }
   @media (min-width: 360px) {
     .nav ul li {
       padding: 0 10px; } }
@@ -1702,7 +1697,11 @@ input {
     .nav a span {
       width: 150px; }
       .nav a span:before {
-        width: 150px; } }
+        width: 150px; }
+    .nav a:hover span,
+    .nav a:focus span {
+      transform: translateY(-100%);
+      color: #fff; } }
 
 .solo, .duo, .trio {
   margin-bottom: 2rem; }
@@ -1895,7 +1894,7 @@ input {
     border-right: 1px solid;
     padding: 0px 5px;
     font-family: "Exo";
-    width: 50px;
+    width: 55px;
     margin-top: -5px;
     position: relative;
     transition: all 0.3s ease-in-out; }
@@ -1926,8 +1925,7 @@ input {
 
 .period {
   font-size: 10px;
-  font-style: italic;
-  text-decoration: underline; }
+  font-style: italic; }
 
 .intro .champion-type {
   background-color: #61D1E5;

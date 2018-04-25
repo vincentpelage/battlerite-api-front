@@ -52,12 +52,7 @@ $nav-height: 60px;
         width: 95px;
       }
     }
-  &:hover span,
-  &:focus span {
-	  transform: translateY(-100%);
-    color: $white;
   }
-}
   @include media-breakpoint-up(xs-bis) {
     ul {
       li {
@@ -84,6 +79,11 @@ $nav-height: 60px;
         &:before {
           width: 150px;
         }
+      }
+      &:hover span,
+      &:focus span {
+    	  transform: translateY(-100%);
+        color: $white;
       }
     }
   }
