@@ -21,7 +21,7 @@ class ChampionStats extends Component {
         <Link to={actor[0].path} >
           <div className="card-details">
             <div className="card-image">
-              <LazyLoad height={200}>
+              <LazyLoad height={300} once={true}>
                 <img src={actor[0].banner} alt={actor[0].name} />
               </LazyLoad>
               <p>{actor[0].name}</p>

@@ -12,7 +12,7 @@ const ChampionSolo = ({ data, actorId }) => {
   return (
     <div className="card card-champion">
       <div className="card-image">
-        <LazyLoad height={200}>
+        <LazyLoad height={300} once={true}>
           <img src={actor[0].image} alt={actor[0].name}/>
         </LazyLoad>
       </div>

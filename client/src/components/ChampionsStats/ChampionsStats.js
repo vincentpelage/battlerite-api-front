@@ -64,7 +64,7 @@ class ChampionsStats extends Component {
 
     return (
       <Fragment>
-        <LazyLoad height={200}>
+        <LazyLoad height={300} once={true}>
           <Header />
         </LazyLoad>
         <Nav />

@@ -15,7 +15,7 @@ class ChampionsMosaic extends Component {
     const { getBestSynergies, selected, actor } = this.props;
     return(
       <div className={selected === actor.id ? 'selected image-wrapper' : 'image-wrapper'} onClick={getBestSynergies(actor.id)} >
-        <LazyLoad height={200}>
+        <LazyLoad height={300} once={true}>
           <img src={actor.image} alt={actor.name} />
         </LazyLoad>
         <span data-actor-id={actor.id}>{actor.name}</span>
