@@ -10,7 +10,6 @@ const WinRate = ({ actorStat }) => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <p className="period">Datas over the last 7 days</p>
             <h3 className="h3 hyphen-turquoise">
               <span className="turquoise">Win Rate</span> per league
             </h3>
