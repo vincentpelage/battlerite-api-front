@@ -18,6 +18,10 @@ $banner-height-desktop: 450px;
     text-align: center;
     height: $banner-height-mobile;
   }
+  a:hover {
+    text-decoration: none;
+    color:inherit;
+  }
   .h2 span {
     background-image: linear-gradient(
     	to right,
