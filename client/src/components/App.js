@@ -62,7 +62,7 @@ class App extends Component {
       <Router onUpdate={() => window.scrollTo(0, 0)}>
         <ScrollToTop>
           <Switch>
-            <Route exact path="/" render={() => <TopChampions topChampions={topChampions} />} />
+            <Route exact path="/" render={() => <TopChampions championStats={championStats} topChampions={topChampions}/>} />
             <Route exact path="/champions-stats" render={() => <ChampionsStats championStats={championStats} />} />
             <Route exact path="/champions-stats/:champion" render={() => <ChampionPage championStats={championStats} />} />
             <Route exact path="/best-synergies" render={() => <BestSynergies bestSynergies={bestSynergies} />} />

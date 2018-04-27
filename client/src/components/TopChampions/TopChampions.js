@@ -9,11 +9,11 @@ import TopTrio from './TopTrio';
 // Local import
 import { topContentSolo, topContentDuo, topContentTrio } from '../../contents/home';
 
-const TopChampions = ({ topChampions }) => (
+const TopChampions = ({ topChampions, championStats }) => (
   <Fragment>
     <Header />
     <Nav />
-    <TopSolo type={topContentSolo.type} style={topContentSolo.style} topSolo={topChampions.topSoloDatas}/>
+    <TopSolo type={topContentSolo.type} style={topContentSolo.style} topSolo={championStats.global}/>
     <TopDuo type={topContentDuo.type} style={topContentDuo.style} topDuo={topChampions.topDuoDatas}/>
     <TopTrio type={topContentTrio.type} style={topContentTrio.style} topTrio={topChampions.topTrioDatas}/>
   </Fragment>

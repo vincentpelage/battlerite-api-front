@@ -49,7 +49,7 @@ class TopSolo extends Component {
             topSolo.slice(0, counter).map( solo => (
               <FadeAndSlideTransition duration={150} key={solo.id}>
                 <div className="col-6 col-md-6 col-lg-3">
-                  <ChampionSolo data={solo.winrate} actorId={solo.id}/>
+                  <ChampionSolo data={solo.winRate} actorId={solo.id}/>
                 </div>
             </FadeAndSlideTransition>
             ))

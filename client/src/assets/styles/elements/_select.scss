@@ -24,6 +24,9 @@
       padding: $select-padding-y 2.5rem $select-padding-y $select-padding-x;
       font-size: $select-font-size;
     }
+    &:focus {
+      background-color: $dark-purple;
+    }
   }
   // Add arrow icons
   &::after {
