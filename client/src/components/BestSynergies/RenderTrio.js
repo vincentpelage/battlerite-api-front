@@ -10,7 +10,7 @@ const RenderTrio = ({ bestSynergiesTrio }) => {
     <Fragment>
       {
         bestSynergiesTrio.map( SynergyTrio => (
-          <div className="col-6" key={SynergyTrio._id.teamIds[0] + SynergyTrio._id.teamIds[1] + SynergyTrio._id.teamIds[2]}>
+          <div className="col-sm-6" key={SynergyTrio._id.teamIds[0] + SynergyTrio._id.teamIds[1] + SynergyTrio._id.teamIds[2]}>
             <ChampionTrio
               data={SynergyTrio.winrate}
               actorId1={SynergyTrio._id.teamIds[0]}
