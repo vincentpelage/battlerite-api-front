@@ -159,7 +159,7 @@ module.exports = function topChampions(){
                 return new Promise((resolve, reject) => {
                   console.log('Starting getTop10Duo()...');
                   const dataDuo = arrRes.filter(obj => {
-                    return obj._id.gameType == 'LEAGUE2V2' && (obj.count / 2) > 250;
+                    return obj._id.gameType == 'LEAGUE2V2' && (obj.count / 2) > 100;
                   });
                   data['duo'] = dataDuo.slice(0, 12);
                   resolve(data['duo']);
@@ -187,7 +187,7 @@ module.exports = function topChampions(){
                   });
                   data['2v2synergie'][championId] = data['2v2synergie'][championId].filter(obj => {
                     obj = {...obj};
-                    return (obj.count / 2) > 80;
+                    return (obj.count / 2) > 100;
                   });
                   data['2v2synergie'][championId] = data['2v2synergie'][championId].slice(0, 10);
                   data['2v2synergie'][championId] = data['2v2synergie'][championId].map(obj => {
