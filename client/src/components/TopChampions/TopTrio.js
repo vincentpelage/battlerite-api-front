@@ -46,7 +46,7 @@ class TopTrio extends Component {
           {
             topTrio.slice(0, counter).map( trio => (
               <FadeAndSlideTransition duration={150} key={trio._id.teamIds[0] + trio._id.teamIds[1] + trio._id.teamIds[2]}>
-                <div className="col-6 col-md-4">
+                <div className="col-sm-6 col-md-4">
                   <ChampionTrio
                     data={trio.winrate}
                     actorId1={trio._id.teamIds[0]}

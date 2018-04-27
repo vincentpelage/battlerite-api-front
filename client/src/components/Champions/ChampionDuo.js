@@ -16,6 +16,8 @@ const ChampionDuo = ({ data, actorId1, actorId2 }) => {
       <div className="card-image">
         <LazyLoad height={300} once={true}>
           <img src={actor1[0].image} alt={actor1[0].name}/>
+        </LazyLoad>
+        <LazyLoad height={300} once={true}>
           <img src={actor2[0].image} alt={actor2[0].name}/>
         </LazyLoad>
       </div>

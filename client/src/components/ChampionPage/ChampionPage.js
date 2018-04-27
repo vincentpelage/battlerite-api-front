@@ -17,7 +17,7 @@ import Performance from './Performance';
 const ChampionPage = ({ championStats }) => {
   const getActorId = () => {
     const currentActor = actors.filter(actor => actor.path === getPathname());
-    if (currentActor.length == 0) {
+    if (currentActor.length === 0) {
 
       window.location.replace('https://limitless-wave-12645.herokuapp.com/champion-not-found');
     } else {
