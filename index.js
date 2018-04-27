@@ -66,39 +66,39 @@ app.use((req, res, next) => {
 //     console.log(data[1]);
 //   })
 
-const initDb = () => {
-  return new Promise((resolve, reject) => {
-    console.log('Init database...');
-    const newdataFront = new dataFront({})
-      .save((err, savedDataFront) => {
-        if (err) {
-          console.error(err);
-          return err;
-        }
-        resolve(savedDataFront);
-      });
-  })
-}
-
-initDb()
-.then(result => {
-  console.log('New data file created', result);
-  return topChampions();
-})
-.then(result => {
-  console.log(result);
-  return bddDatasChampionsStats();
-})
+// const initDb = () => {
+//   return new Promise((resolve, reject) => {
+//     console.log('Init database...');
+//     const newdataFront = new dataFront({})
+//       .save((err, savedDataFront) => {
+//         if (err) {
+//           console.error(err);
+//           return err;
+//         }
+//         resolve(savedDataFront);
+//       });
+//   })
+// }
+//
+// initDb()
+// .then(result => {
+//   console.log('New data file created', result);
+//   return topChampions();
+// })
 // .then(result => {
 //   console.log(result);
-//   return championSynergie();
+//   return bddDatasChampionsStats();
 // })
-.then(result => {
-  console.log(result);
-})
-.catch(error => {
-  console.log(error);
-})
+// // .then(result => {
+// //   console.log(result);
+// //   return championSynergie();
+// // })
+// .then(result => {
+//   console.log(result);
+// })
+// .catch(error => {
+//   console.log(error);
+// })
 
 
 
