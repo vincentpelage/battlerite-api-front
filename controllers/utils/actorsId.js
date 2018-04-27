@@ -136,4 +136,17 @@ const actorsId = [
   },
 ]
 
+// const actorsId = [
+//   {
+//     name: 'sirius',
+//     id: '259914044',
+//     role: 'support',
+//   },
+//   {
+//     name: 'alysia',
+//     id: '613085868',
+//     role: 'ranged',
+//   },
+// ]
+
 module.exports = actorsId;

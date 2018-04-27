@@ -89,10 +89,10 @@ app.use((req, res, next) => {
 //   console.log(result);
 //   return bddDatasChampionsStats();
 // })
-// .then(result => {
-//   console.log(result);
-//   return championSynergie();
-// })
+// // .then(result => {
+// //   console.log(result);
+// //   return championSynergie();
+// // })
 // .then(result => {
 //   console.log(result);
 // })
