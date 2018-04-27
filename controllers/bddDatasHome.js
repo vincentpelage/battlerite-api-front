@@ -170,7 +170,7 @@ module.exports = function topChampions(){
                 return new Promise((resolve, reject) => {
                   console.log('Starting getTop10Trio()...');
                   const dataTrio = arrRes.filter(obj => {
-                    return obj._id.gameType == 'LEAGUE3V3' && (obj.count / 3) > 40;
+                    return obj._id.gameType == 'LEAGUE3V3' && (obj.count / 3) > 20;
                   })
                   data['trio'] = dataTrio.slice(0, 12)
                   resolve(data['trio']);
@@ -227,7 +227,7 @@ module.exports = function topChampions(){
                     }) && obj._id.gameType == 'LEAGUE3V3';
                   });
                   data['3v3synergie'][championId] = data['3v3synergie'][championId].filter(obj => {
-                    return (obj.count / 3) > 40;
+                    return (obj.count / 3) > 20;
                   });
                   data['3v3synergie'][championId] = data['3v3synergie'][championId].slice(0, 10);
                   data['3v3synergie'][championId] = data['3v3synergie'][championId].map(obj => {
