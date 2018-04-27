@@ -1562,6 +1562,9 @@ input {
     justify-content: center;
     text-align: center;
     height: 290px; }
+  .header a:hover {
+    text-decoration: none;
+    color: inherit; }
   .header .h2 span {
     background-image: linear-gradient(to right, #8083FF, #8083FF 50%, #61D1E5 50%);
     background-size: 200% 100%;
@@ -1785,8 +1788,6 @@ input {
 .card-champion {
   text-align: center;
   transition: all 0.3s ease-in-out; }
-  .card-champion:hover {
-    transform: scale(1.05); }
   .card-champion .card-image {
     display: flex;
     flex-direction: row;
@@ -2070,7 +2071,11 @@ input {
       cursor: pointer;
       transition: opacity 0.15s linear; }
     .card-mosaic .image-wrapper.selected img {
-      opacity: 1; }
+      opacity: 1;
+      border: 2px solid #61D1E5;
+      cursor: default; }
+    .card-mosaic .image-wrapper.selected span {
+      cursor: default; }
     .card-mosaic .image-wrapper:not(.selected)::after {
       content: '';
       position: absolute;
