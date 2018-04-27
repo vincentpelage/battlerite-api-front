@@ -17,7 +17,8 @@ class BestSynergies extends Component {
   storeSearchInput = React.createRef();
 
   static propTypes = {
-    bestSynergies: PropTypes.object,
+    bestSynergiesDuo: PropTypes.object,
+    bestSynergiesTrio: PropTypes.object,
   }
 
   state = {
@@ -33,9 +34,9 @@ class BestSynergies extends Component {
   }
 
   getSynergies = (actorId) => {
-    const { bestSynergies } = this.props;
-    const bestSynergiesDuo = bestSynergies[actorId]['duo'];
-    const bestSynergiesTrio = bestSynergies[actorId]['trio'];
+    let { bestSynergiesDuo, bestSynergiesTrio } = this.props;
+    bestSynergiesDuo = bestSynergiesDuo[actorId];
+    bestSynergiesTrio = bestSynergiesTrio[actorId];
     this.setState({ bestSynergiesTrio, bestSynergiesDuo, selected: actorId });
   }
 

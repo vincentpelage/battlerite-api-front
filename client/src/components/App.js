@@ -25,7 +25,10 @@ class App extends Component {
       topTrioDatas: []
     },
     championStats: {},
-    bestSynergies: {},
+    bestSynergies: {
+      bestSynergiesDuo: {},
+      bestSynergiesTrio: {},
+    },
   };
 
   componentWillMount() {
@@ -39,7 +42,10 @@ class App extends Component {
             topTrioDatas: response.data.topChampions.trio
           },
           championStats: response.data.championStats,
-          bestSynergies: response.data.bestSynergies,
+          bestSynergies: {
+            bestSynergiesDuo: response.data.topChampions['2v2synergie'],
+            bestSynergiesTrio: response.data.topChampions['3v3synergie'],
+          },
         });
       })
       .catch(function (error) {
@@ -65,7 +71,7 @@ class App extends Component {
             <Route exact path="/" render={() => <TopChampions championStats={championStats} topChampions={topChampions}/>} />
             <Route exact path="/champions-stats" render={() => <ChampionsStats championStats={championStats} />} />
             <Route exact path="/champions-stats/:champion" render={() => <ChampionPage championStats={championStats} />} />
-            <Route exact path="/best-synergies" render={() => <BestSynergies bestSynergies={bestSynergies} />} />
+            <Route exact path="/best-synergies" render={() => <BestSynergies bestSynergiesDuo={bestSynergies.bestSynergiesDuo} bestSynergiesTrio={bestSynergies.bestSynergiesTrio} />} />
             <Route component={NotFound} />
           </Switch>
         </ScrollToTop>
