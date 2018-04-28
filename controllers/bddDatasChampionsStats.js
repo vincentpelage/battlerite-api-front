@@ -281,16 +281,6 @@ module.exports = function bddDatasChampionsStats (req, res) {
       })
     }
 
-    // function leaguesStats(){
-    //   return new Promise((resolve, reject) => {
-    //     leagues.map(league => {
-    //       championsStats('globalPerLeague', league);
-    //       championsStats('league2v2PerLeague', league);
-    //       championsStats('league3v3PerLeague', league);
-    //     })
-    //   })
-    // }
-
   globalStats()
     .then(result => {
       console.log(result);

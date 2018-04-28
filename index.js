@@ -32,73 +32,38 @@ app.use((req, res, next) => {
   next();
 });
 
-// function oneToFive(){
-//   return new Promise(function(resolve, reject){
-//     let arr = [];
-//     for(let i = 0 ; i < 6 ; i++){
-//       arr.push(i);
-//     }
-//     resolve(arr[arr.length-1]);
-//   })
-// }
-//
-// function fiveToTen(){
-//   return new Promise(function(resolve, reject){
-//     let arr = [];
-//     for(let i = 5 ; i < 11 ; i++){
-//       arr.push(i);
-//     }
-//     resolve(arr[arr.length-1]);
-//   })
-// }
-//
-// // oneToFive()
-// //   .then(result => {
-// //     console.log(result);
-// //   })
-// //   .catch(error => {
-// //     console.log(error);
-// //   })
-//
-// Promise.all([oneToFive(), fiveToTen()])
-//   .then(function(data){
-//     console.log(data[0]);
-//     console.log(data[1]);
-//   })
+app.get('/api/fill-bdd', (req, res) => {
+  const initDb = () => {
+    return new Promise((resolve, reject) => {
+      console.log('Init database...');
+      const newdataFront = new dataFront({})
+        .save((err, savedDataFront) => {
+          if (err) {
+            console.error(err);
+            return err;
+          }
+          resolve(savedDataFront);
+        });
+    })
+  }
 
-// const initDb = () => {
-//   return new Promise((resolve, reject) => {
-//     console.log('Init database...');
-//     const newdataFront = new dataFront({})
-//       .save((err, savedDataFront) => {
-//         if (err) {
-//           console.error(err);
-//           return err;
-//         }
-//         resolve(savedDataFront);
-//       });
-//   })
-// }
-//
-// initDb()
-// .then(result => {
-//   console.log('New data file created', result);
-//   return topChampions();
-// })
-// .then(result => {
-//   console.log(result);
-//   return bddDatasChampionsStats();
-// })
-// // .then(result => {
-// //   console.log(result);
-// //   return championSynergie();
-// // })
-// .then(result => {
-//   console.log(result);
-// })
-// .catch(error => {
-//   console.log(error);
-// })
+  initDb()
+  .then(result => {
+    console.log('New data file created', result);
+    return topChampions();
+  })
+  .then(result => {
+    console.log(result);
+    return bddDatasChampionsStats();
+  })
+  .then(result => {
+    console.log(result);
+  })
+  .catch(error => {
+    console.log(error);
+  })
+})
+
 
 
 
