@@ -18,9 +18,14 @@ db.once('open', () => {
 
 
 module.exports = function getApiDatas (req, res) {
+  const date = {
+    startDate: '',
+    endDate: '',
+  }
 
   const getData = link => {
     let config = {};
+    // console.log(date);
     config.headers = {
       'Accept-Encoding': 'gzip',
       'Authorization': key,
@@ -31,6 +36,7 @@ module.exports = function getApiDatas (req, res) {
       .get(link, config)
       .then((response) => {
         console.log('new request: ', link);
+        const dateArr = [];
 
         response.data.data.map(match => {
           const rosters = match.relationships.rosters.data;
@@ -60,6 +66,8 @@ module.exports = function getApiDatas (req, res) {
                 teammateArr.push(Number(teammateObj[0].attributes.actor));
               })
               const teamIds = [...teammateArr, Number(participantObj[0].attributes.actor)].sort((a, b) => { return a - b });
+
+              dateArr.push(match.attributes.createdAt);
 
               const newChampion = new Champion({
                 actorId: participantObj[0].attributes.actor,
@@ -103,21 +111,70 @@ module.exports = function getApiDatas (req, res) {
           })
         })
         // res.send(response.data);
-        console.log('next link: ', response.data.links.next)
-        if(response.data.links.next !== 'https://api.dc01.gamelockerapp.com/shards/global/matches?filter[createdAt-start]=2018-04-13T13:25:30Z&filter[rankingType]=RANKED&page[limit]=5&page[offset]=50000&sort=createdAt'){
-          setTimeout(function(){
-            getData(response.data.links.next);
-          }, 8000);
+        console.log('next link: ', response.data.links.next);
+        // console.log(dateArr[dateArr.length - 1]);
+        // console.log('date.endDate ', date.endDate);
+        if(dateArr[dateArr.length - 1] > date.endDate){
+          console.log('All datas were fetched');
+          return null;
         } else {
-          res.send(response.data);
+          if(response.data.links.next.search('offset]=10000') === -1){
+            console.log('Limite non atteinte, continue ...')
+            setTimeout(function(){
+              getData(response.data.links.next);
+            }, 6100);
+          } else {
+            console.log('Limite atteinte');
+            const newstart = dateArr[dateArr.length - 1];
+            const newLink = `https://api.dc01.gamelockerapp.com/shards/global/matches?sort=createdAt&page[limit]=5&filter[createdAt-start]=${newstart}&filter[rankingType]=RANKED`
+            console.log('Création d\'un nouveau lien')
+            setTimeout(function(){
+              getData(newLink);
+            }, 6100);
+
+          }
         }
+
       })
       .catch((error) => {
         console.log(error.response)
       });
   }
 
-  const link = 'https://api.dc01.gamelockerapp.com/shards/global/matches?sort=createdAt&page[limit]=5&filter[createdAt-start]=2018-04-13T13:25:30Z&filter[rankingType]=RANKED';
-  getData(link);
+  function addDays(startDate,numberOfDays)
+  {
+    const returnDate = new Date(
+        startDate.getFullYear(),
+        startDate.getMonth(),
+        startDate.getDate()+numberOfDays,
+        startDate.getHours()+23,
+        startDate.getMinutes()+50,
+        startDate.getSeconds());
+    return returnDate;
+  }
+
+  const getMonday = d => {
+    return new Promise((resolve, reject) => {
+      d = new Date(d);
+      d.setUTCHours(0,0,0);
+      const day = d.getDay();
+      const diff = d.getDate() - day + (day == 0 ? -6:-6);
+      resolve(new Date(d.setDate(diff)));
+    })
+  }
+
+  getMonday(new Date()).then(result => {
+    const startDate = result.toISOString().slice(0, 10);
+    date.startDate = startDate;
+    date.endDate = addDays(result,6).toISOString().slice(0, 16);
+
+    const link = `https://api.dc01.gamelockerapp.com/shards/global/matches?sort=createdAt&page[limit]=5&filter[createdAt-start]=${startDate}T00:00:00Z&filter[rankingType]=RANKED`;
+    getData(link);
+  });
+
+  // const startDate = 0;
+  // const endDate = '2018-04-29';
+
+
 
 };

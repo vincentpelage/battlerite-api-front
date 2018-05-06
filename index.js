@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const schedule = require('node-schedule');
+const mongoose = require('mongoose');
 require('dotenv').config();
 
 
@@ -14,9 +15,6 @@ const dataFront = require('./models/dataFront');
 
 // Route import
 const home = require('./routes/home');
-// const bddDatasHome = require('./routes/bddDatasHome');
-// const bddDatasChampionsStats = require('./routes/bddDatasChampionsStats');
-// const bddDatasSynergie = require('./routes/bddDatasSynergie');
 const apiDatas = require('./routes/apiDatas');
 const dataToFront = require('./routes/dataToFront');
 
@@ -32,10 +30,64 @@ app.use((req, res, next) => {
   next();
 });
 
+const mongoDB = `mongodb://vincent:${process.env.DB_PASS}@ds113749.mlab.com:13749/battlerite-api`;
+mongoose.connect(mongoDB);
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'mongoDB connection error: '));
+db.once('open', () => {
+  // console.log('Connected to the DB');
+});
+
+// const getSunday = d => {
+//   return new Promise((resolve, reject) => {
+//     d = new Date(d);
+//     d.setUTCHours(0,0,0);
+//     const day = d.getDay();
+//     const diff = d.getDate() - day + (day == 7 ? 7:0);
+//     resolve(new Date(d.setDate(diff)));
+//   })
+// }
+//
+// getSunday(new Date()).then(result => {
+//   console.log('sunday: ',result)
+// });
+
+//function to add days to a given date.
+// function addDays(startDate,numberOfDays)
+// {
+//   var returnDate = new Date(
+//               startDate.getFullYear(),
+//               startDate.getMonth(),
+//               startDate.getDate()+numberOfDays,
+//               startDate.getHours(),
+//               startDate.getMinutes(),
+//               startDate.getSeconds());
+//   return returnDate;
+// }
+//
+// const getMonday = d => {
+//   return new Promise((resolve, reject) => {
+//     d = new Date(d);
+//     d.setUTCHours(0,0,0);
+//     const day = d.getDay();
+//     const diff = d.getDate() - day + (day == 0 ? -6:-6);
+//     resolve(new Date(d.setDate(diff)));
+//   })
+// }
+//
+// getMonday(new Date()).then(result => {
+//   console.log('monday: ',result);
+//   console.log('monday + 6: ',addDays(result,6));
+//
+// });
+
 app.get('/api/fill-bdd', (req, res) => {
   const initDb = () => {
     return new Promise((resolve, reject) => {
       console.log('Init database...');
+      console.log('Remove old documents from collection...');
+      db.collection('datafronts').remove( { } );
+      console.log('Collection is empty...');
       const newdataFront = new dataFront({})
         .save((err, savedDataFront) => {
           if (err) {
